@@ -1,0 +1,191 @@
+:root {
+    --clr-primary-100:hsl(300, 43%, 22%);
+    --clr-primary-200: hsl(333, 80%, 67%);
+
+    --clr-secondary-200: hsl(303, 10%, 53%);
+    --clr-secondary-300: hsl(300, 24%, 96%); 
+    --clr-secondary-400: hsl(0, 0%, 100%); 
+    
+  
+    --ff-base:"League Spartan", sans-serif;;
+    
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+  
+    --fs-base: 15px;
+  }
+  
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+
+   body{
+    background-color: var(--clr-secondary-400);
+    background: url(images/bg-pattern-top-mobile.svg)no-repeat top left,url(images/bg-pattern-bottom-mobile.svg)no-repeat bottom right;
+    display: grid;
+    place-content: center;
+  }
+  .container{
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    margin: 30px;
+  } 
+  .title{
+    text-align: center;
+    margin-block: 30px;
+  }
+  .title h1{
+    font-size: 40px;
+    color: var(--clr-primary-100);
+    line-height: 0.85em;
+    margin-bottom: 20px;
+  }
+  .title p{
+    color: var(--clr-secondary-200);
+    line-height: 1.5;
+    font-weight: var(--fw-semi-bold);
+  }
+  .review{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .stars{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+  .stars img{
+    width: 12px;
+  }
+  .rated{
+    background-color: var(--clr-secondary-300);
+    color: var(--clr-primary-100);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px ;
+    padding: 15px;
+  }
+  .boxes{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-block: 30px;
+  }
+  .comment{
+    background-color:var(--clr-primary-100) ;
+    color: var(--clr-secondary-300);
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  .avatar{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .comment span{
+    color: var(--clr-primary-200);
+  }
+  .comment img{
+    border-radius: 100%;
+    width: 35px;
+  } 
+
+  
+  @media (min-width:975px){
+    body{
+      background: url(images/bg-pattern-top-desktop.svg)no-repeat top left,url(images/bg-pattern-bottom-desktop.svg)no-repeat bottom right;
+      height: 100vh;
+    }
+    .container{
+      max-width:1000px; 
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title{
+      text-align: left;
+      width: 360px;
+    }
+    .title h1{
+      font-size: 50px;
+    }
+    .stars{
+      gap: 6px;
+      margin: 0 15px;
+    }
+    .rated{
+      display: flex;
+      align-items: center;
+    }
+    .rated:nth-child(1){
+      position: relative;
+      right: 100px;
+    }
+    .rated:nth-child(2){
+      position: relative;
+      right: 50px;
+    }
+    .boxes{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .comment:nth-child(2){
+      position: relative;
+      top: 20px;
+    }
+    .comment:nth-child(3){
+      position: relative;
+      top: 40px;
+    }
+  }
+
+
+
